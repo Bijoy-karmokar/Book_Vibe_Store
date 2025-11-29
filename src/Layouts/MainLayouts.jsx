@@ -7,7 +7,7 @@ const MainLayouts = () => {
     return (
         <div className='w-10/12 mx-auto'>
              <Navbar></Navbar>
-            <div className='bg-amber-400 min-h-[calc(100vh-250px)]'>
+            <div className='min-h-[calc(100vh-250px)]'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
