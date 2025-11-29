@@ -1,10 +1,13 @@
 import { Star } from "lucide-react";
 import React from "react";
+import { Link } from "react-router";
 
 const Book = ({book}) => {
-    const {bookName,author,image,category,publisher,rating,review,tags,totalPages,yearOfPublishing} =book;
+    // category,publisher,totalPages,yearOfPublishing,review
+    const {bookId,bookName,author,image,rating,tags} =book;
   return (
-    <div className="card bg-base-100  shadow-md my-8">
+    <Link to={`/bookDetails/${bookId}`}>
+        <div className="card bg-base-100  shadow-md my-8">
       <figure className="bg-base-300 m-6 rounded-2xl">
         <img
         className="w-36 h-56 py-6"
@@ -35,6 +38,7 @@ const Book = ({book}) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

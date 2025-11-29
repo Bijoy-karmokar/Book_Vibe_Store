@@ -2,17 +2,24 @@ import { createBrowserRouter } from "react-router";
 import MainLayouts from "../Layouts/MainLayouts";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
+import BookDetails from "../pages/Books/BookDetails";
 
 const router = createBrowserRouter([
     {
         path:'/',
         Component:MainLayouts,
-        errorElement:ErrorPage,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 index:true,
-                loader:()=>fetch('./books.json'),
-                Component:Home
+                loader:()=>fetch('/booksData.json'),
+                Component:Home,
+                
+            },
+            {
+                path:'/bookDetails/:bookId',
+                loader:()=>fetch('/booksData.json'),
+                Component:BookDetails
             }
         ]
     }
