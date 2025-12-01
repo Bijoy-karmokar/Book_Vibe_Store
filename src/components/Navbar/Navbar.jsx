@@ -14,7 +14,7 @@ const Navbar = () => {
         <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/readlist"}>ReadList</NavLink>
       </li>
       <li>
-        <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/details"}>Details</NavLink>
+        <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/pageToRead"}>Page To Read</NavLink>
       </li>
     </>
   );
