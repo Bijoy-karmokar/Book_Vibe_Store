@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import {addToData} from "../../Utility/AddToDB"
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -21,6 +22,10 @@ const BookDetails = () => {
     yearOfPublishing,
     review,
   } = singleBook;
+
+  const handleRead =(id)=>{
+      addToData(id);
+  }
 
   return (
     <div className="hero">
@@ -60,6 +65,7 @@ const BookDetails = () => {
             <p>Rating:{rating}</p>
           </div>
           <button
+          onClick={()=>handleRead(bookId)}
             className=" cursor-pointer rounded px-5 py-2.5 overflow-hidden group bg-green-500 relative  hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
           >
             <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>

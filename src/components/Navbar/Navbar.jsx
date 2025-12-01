@@ -11,7 +11,7 @@ const Navbar = () => {
         <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/about"}>About</NavLink>
       </li>
       <li>
-        <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/booklist"}>BookList</NavLink>
+        <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/readlist"}>ReadList</NavLink>
       </li>
       <li>
         <NavLink className={({isActive})=>isActive? "bg-green-500 text-white" : " "} to={"/details"}>Details</NavLink>
